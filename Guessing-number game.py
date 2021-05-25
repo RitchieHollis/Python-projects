@@ -2,7 +2,7 @@
 """
 Number guessing game
 
-Author: WC
+Author: RitchieHollis
 game not finished, works in overall
 """
 
@@ -14,45 +14,45 @@ def loop():
     random_number = int(random.randint(1,10))
     while True:
 
-            num_pers = input("Zgadnij liczbe od 1 do 10: ")
+            num_pers = input("Choose a number between 1 and 10: ")
             if int(num_pers) < 0 or int(num_pers) > 10:
-                print("Musisz wybrac liczbe od 1 do 10")
+                print("You must choose a number between 1 ad 10")
                 loop()
             """if type(num_pers) != int:
                 print("Musisz podac liczbe")
                 loop()"""
             if int(num_pers) == random_number:
                 score = score + 1
-                print ("Dobrze!")
-                print("Zajelo ci to: ",score,"prob")
-                choice2 = input("Chcesz zagrac jeszcze raz? (Tak/Nie): ")
+                print ("Good!")
+                print("After: ",score,"trials")
+                choice2 = input("Wanna play again? (Yes/No): ")
 
-                if choice2.lower() == 'tak':
+                if choice2.lower() == 'yes':
                     loop()
-                elif choice2.lower() == 'nie':
-                   print("Okej, milego dnia :-D")
+                elif choice2.lower() == 'no':
+                   print("Okay, goodbye :-D")
                    input()
                    return
                    
             elif int(num_pers) > random_number:
-                print("Zle! Tepy chuju! Ta liczba jest nizsza")
+                print("Nope, it's lower")
                 score = score + 1
             elif int(num_pers) < random_number:
-                print("Zle! Tepy chuju! Ta liczba jest wyzsza")
+                print("Nope, it's higher")
                 score = score + 1
     
 def main_game():
     
 
-    player_name = input("Jak sie nazywasz?: ")
-    choice = input("Hej {}, chcesz zagrac w gre zgadywanie liczb? (Tak/Nie) ".format(player_name))
-    if choice.lower() == "tak":
+    player_name = input("Hi, what's your name?: ")
+    choice = input("Hey {}, do you want to play a game? (Yes/No) ".format(player_name))
+    if choice.lower() == "yes":
        loop()
        
             
                
-    elif choice.lower() == "nie":
-        print("Okej, milego dnia :-D")
+    elif choice.lower() == "no":
+        print("Okay, goodbye :-D")
         input()
         return
     
