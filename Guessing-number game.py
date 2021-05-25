@@ -3,6 +3,7 @@
 Number guessing game
 
 Author: WC
+game not finished, works in overall
 """
 
 import random
