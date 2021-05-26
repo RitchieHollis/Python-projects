@@ -12,7 +12,7 @@ def loop():
     score = 0
     
     random_number = int(random.randint(1,10))
-    while True:
+    while n == True:
 
             num_pers = input("Choose a number between 1 and 10: ")
             if int(num_pers) < 0 or int(num_pers) > 10:
@@ -31,8 +31,10 @@ def loop():
                     loop()
                 elif choice2.lower() == 'no':
                    print("Okay, goodbye :-D")
+                   n = False
                    input()
-                   return
+                   loop()
+                  
                    
             elif int(num_pers) > random_number:
                 print("Nope, it's lower")
